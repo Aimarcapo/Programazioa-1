@@ -35,7 +35,7 @@ public class AverageWithInputValidation {
 
         average = sum / 3 ;
 
-        System.out.printf("The average is:%.2f", average );
+        System.out.printf("The average is: %.2f", average );
 
     }
 }
