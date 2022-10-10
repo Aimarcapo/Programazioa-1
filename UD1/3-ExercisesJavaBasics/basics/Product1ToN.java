@@ -3,11 +3,9 @@ public class Product1ToN {
         int product = 1;
         final int LOWERBOUND = 1;
         final int UPPERBOUND = 10;
-        int cont = LOWERBOUND;
-
-        while (cont < UPPERBOUND) {
-            product *= cont;
-            cont ++;
+        
+        for(int cont = LOWERBOUND; cont < UPPERBOUND; cont ++) {
+            product *= cont;    
         }
         System.out.println("The product is " + product);
     }
