@@ -14,7 +14,7 @@ public class ReverseString {
         in.close();
         int index = inStrLen - 1;
 
-        System.out.print("Sartu duzun hitzaren alderantziskoa hau da: ");
+        System.out.print("Sartu duzun hitzaren alderantzizkoa hau da: ");
         do {
             System.out.print(inStr.charAt(index));
             --index;
