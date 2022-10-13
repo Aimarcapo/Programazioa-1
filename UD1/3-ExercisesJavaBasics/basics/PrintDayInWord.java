@@ -1,7 +1,10 @@
 public class PrintDayInWord {
     public static void main(String[] args) {
-        int day = 5;  
-         
+        
+      //ALDAGAIA DEFINITU
+      int day = 5;  
+       
+        //NESTED-IF, KASU BAKOITZERAKO (HOBETO SWITCH-CASE-DEFAULT)
         if (day == 1) {   
            System.out.println( "ASTELEHENA" );
         } else if ( day == 2 ) {
