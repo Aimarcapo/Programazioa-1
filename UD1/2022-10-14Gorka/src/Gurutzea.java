@@ -14,23 +14,27 @@ public class Gurutzea {
         } while((tamaina % 2) == 0);
 
         for(int x = 0; x < tamaina; x++){
-            
+
             if(tamaina/2 == x){
+                
                 for(int y = 0; y < tamaina; y++){
                     System.out.print("0 ");
                 }
+
             } else{
+                
                 for(int y = 0; y < tamaina; y++){
+                    
                     if((tamaina/2) == y){
                         System.out.print("0 ");
                     } else {
                         System.out.print("* ");
                     }
-                }
-            }
 
-            System.out.println("");
+                }
             
+            }
+            System.out.println("");            
         }        
     }
 }
