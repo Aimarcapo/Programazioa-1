@@ -17,7 +17,7 @@ public class exponent {
         System.out.println("Sartutako zenbakien berreketa " + exponent(base, exp) + " da.");
     }
     
-    public static int exponent(int base, int exp) {
+    public static int exponent (int base, int exp) {
         
         int product = 1;
 
