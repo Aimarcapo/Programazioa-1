@@ -1,7 +1,7 @@
 package methods;
 import java.util.Scanner;
 
-public class exponent {
+public class Exponent {
     public static void main(String[] args) {
         
         //ALDAGAIAK DEFINITU
@@ -14,10 +14,10 @@ public class exponent {
         base = in.nextInt();
         in.close();
 
-        System.out.println("Sartutako zenbakien berreketa " + exponent(base, exp) + " da.");
+        System.out.println("Sartutako zenbakien berreketa " + expon(base, exp) + " da.");
     }
     
-    public static int exponent (int base, int exp) {
+    public static int expon (int base, int exp) {
         
         int product = 1;
 
