@@ -20,12 +20,12 @@ public class Search {
         System.out.print("Esan topatu nahi duzun zenbakia: ");
         key = in.nextInt();
 
-        System.out.println(Search(array, key));
+        System.out.println(search(array, key));
 
         in.close();
     }
 
-    public static int Search(int[] array, int key){
+    public static int search(int[] array, int key){
 
         int index = -1;
 
