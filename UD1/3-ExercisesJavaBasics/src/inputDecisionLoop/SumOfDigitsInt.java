@@ -18,7 +18,6 @@ public class SumOfDigitsInt {
         if(number < 0) {
             System.out.println("Sartutako zenbakia positiboa izan behar da.");
         } else {
-            System.out.print("The reverse is: ");
             while(number>0) {
                 digit = number % 10;
                 sum += digit;
