@@ -1,36 +1,55 @@
 public class Circle {
-    // Private instance variables
+   //ALDAGAI PRIBATUAK SORTU
    private double radius;
    private String color;
 
-   // Constructors (overloaded)
-   /** Constructs a Circle instance with default radius and color */
-   public Circle() {                   // 1st Constructor (default constructor)
+   //KONSTRUKTOREAK
+   //SORTU KONSTRUKTOR BAT DEFAULTEKO BALOREEKIN
+   public Circle() {                 // 1st Constructor
       radius = 1.0;
       color = "red";
    }
-   /** Constructs a Circle instance with the given radius and default color*/
+   //KONSTRUKTORE BAT R JAKINDA, ETA DEFAULTEKO KOLOREA ERABILIZ
    public Circle(double r) {           // 2nd Constructor
       radius = r;
       color = "red";
    }
-   /** Constructs a Circle instance with the given radius and color */
+   //KONSTRUKTORE BAT, R ETA C JAKINDA
    public Circle(double r, String c) { // 3rd Constructor
       radius = r;
       color = c;
    }
 
-   // Public methods
-   /** Returns the radius */
-   public double getRadius() {  // getter for radius
+   //METODO PUBLIKOAK
+   // /** MOTA HONETAKO NOTAK, JAVA.DOC DEITZEN DIRA, ETA AZALPEN BEZALA AGERTZEN DA METODOREN BAT APLIKATZERAKO ORDUAN. */
+
+   //RADIOA BUELTATZEKO. getter METODO PUBLIKO BAT, ZIRKULU BATEN ERRADIOA ERAKUTSI AHAL IZATEKO.
+   public double getRadius() { 
       return radius;
    }
-   /** Returns the color */
-   public String getColor() {   // getter for color
+
+   //KOLOREA BUELTATZEKO. getter METODO PUBLIKO BAT, ZIRKULU BATEN KOLOREA ERAKUTSI AHAL IZATEKO.
+   public String getColor() {  
       return color;
    }
-   /** Returns the area of this circle */
+
+   //AREA BUELTATZEKO. getter METODO PUBLIKO BAT, ZIRKULU BATEN AREA ERAKUTSI AHAL IZATEKO.
    public double getArea() {
       return radius * radius * Math.PI;
+   }
+
+   //ZIRKULU BATEN ATRIBUTOAK STRING BEZALA BISTARATU AHAL IZATEKO.
+   public String toString() {
+      return "Circle[Radius=" + radius + ", Color=" + color + "]";
+   }
+
+   // Setter MOTATAKO METODOA, ZIRKULU BATEN EZARRITUTAKO KOLOREA ALDATZEKO.
+   public void setColor(String newColor) {
+      color = newColor;
+   }
+   
+   // Setter MOTATAKO METODOA, ZIRKULU BATEN EZARRITUTAKO ERRADIOA ALDATZEKO.
+   public void setRadius(double newRadius) {
+      radius = newRadius;
    }
 }
