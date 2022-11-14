@@ -41,5 +41,5 @@ public class LaukiBatSortu {
             
             System.out.println("");
         }
-    }
+    }    
 }

@@ -63,4 +63,30 @@ public class Laukia {
         return "Laukia[" + zabalera + "x" + altuera + "]";
     }
 
+    //HANDIENA TOPATZEKO METODOAK
+    /**2 lauki konparatzeko metodoa */
+    public  boolean isBiggerThan(Laukia l1) {
+
+        boolean handiago = false;
+
+        if (this.getAzalera() > l1.getAzalera()) {
+            handiago = true;
+        }
+
+        return handiago;
+
+    }
+
+    public static Laukia getTheBiggest(Laukia[] laukiak) {
+        
+        Laukia max = laukiak[0];
+
+        for (int i = 1; i < laukiak.length && laukiak[i] != null; i++) {
+            if (laukiak[i].isBiggerThan(max)) {
+                max = laukiak[i];
+            }
+        }
+
+        return max;
+    }
 }
