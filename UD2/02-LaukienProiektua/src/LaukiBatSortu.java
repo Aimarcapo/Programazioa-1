@@ -14,7 +14,8 @@ public class LaukiBatSortu {
         System.out.println("Lauki " + l1.getMota() + " sortu duzu: => " + l1);
 
         System.out.println("Hona marrazkia beteta:");
-
+//KONTUZ, GORKA:  for hauek ez dituzu hemen programatu behar baizik eta Laukia klaseko metodotan. 
+//                Hemen metodo horiek "inbokatu" egin behar dituzu
         for(int y = 0; y < l1.getAltuera(); y++){
             for (int x = 0; x < l1.getZabalera(); x++) {
                 System.out.print("* ");
