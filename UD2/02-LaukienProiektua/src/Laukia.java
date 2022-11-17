@@ -63,13 +63,73 @@ public class Laukia {
         return "Laukia[" + zabalera + "x" + altuera + "]";
     }
 
+    //MARRAZTEKO
+    /**Metodo honek laukia beteta marrazten du. */
+    public void marraztuHutsik(){
+        
+        for(int y = 1; y <= this.getAltuera(); y++){
+            if(y==1 || y==this.getAltuera()){
+                for(int x = 1; x <= this.getZabalera(); x++){
+                    System.out.print("* ");
+                }
+            } else {
+                for (int x = 1; x <= this.getZabalera(); x++) {
+                    if(x==1 || x==this.getZabalera()){
+                        System.out.print("* ");
+                    } else {
+                        System.out.print("  ");
+                    }
+                }
+            }
+            
+            System.out.println("");
+        }
+    }
+
+    /**Metodo honek laukia hutsik marrazten du. */
+    public void marraztuBeteta(){
+        
+        for(int y = 0; y < this.getAltuera(); y++){
+            for (int x = 0; x < this.getZabalera(); x++) {
+                System.out.print("* ");
+            }
+            System.out.println("");
+        }
+    }
+
+    /**Karaktere berezi batekin laukia marrazteko */
+    public void marraztuBeteta(char ikurra){
+        for(int y = 0; y < this.getAltuera(); y++){
+            for (int x = 0; x < this.getZabalera(); x++) {
+                System.out.print(ikurra + " ");
+            }
+            System.out.println("");
+        }
+    }
+
+    /**Karaktere berezi batekin lauki marraztuaren String-a bueltatzeko */
+    public String laukiBetea(){
+        String emaitza = "";
+
+        for(int y = 0; y < this.getAltuera(); y++){
+            for (int x = 0; x < this.getZabalera(); x++) {
+                emaitza += "* ";
+            }
+            emaitza += "\n";
+        }        
+
+        return emaitza;
+    }
+
+    
+
     //HANDIENA TOPATZEKO METODOAK
     /**2 lauki konparatzeko metodoa */
-    public  boolean isBiggerThan(Laukia l1) {
+    public  boolean isBiggerThan(Laukia l) {
 
         boolean handiago = false;
 
-        if (this.getAzalera() > l1.getAzalera()) {
+        if (this.getAzalera() > l.getAzalera()) {
             handiago = true;
         }
 
@@ -77,16 +137,34 @@ public class Laukia {
 
     }
 
-    public static Laukia getTheBiggest(Laukia[] laukiak) {
+    public static Laukia getTheBiggest(Laukia[] lk) {
         
-        Laukia max = laukiak[0];
+        Laukia max = lk[0];
 
-        for (int i = 1; i < laukiak.length && laukiak[i] != null; i++) {
-            if (laukiak[i].isBiggerThan(max)) {
-                max = laukiak[i];
+        for (int i = 1; i < lk.length && lk[i] != null; i++) {
+            if (lk[i].isBiggerThan(max)) {
+                max = lk[i];
             }
         }
 
         return max;
     }
+
+    //ARIKETA GEHIGARRIAK
+
+    /**Lauki array bat txikienetik handieneta ordenatzeko */
+    public static void ordenatu(Laukiak[] laukiak){
+        
+        for (int a = 0; a < laukiak.length; a++) {
+            for (int i = 0; i < laukiak.length-1; i++) {
+                if(laukiak[i] > laukiak[i+1]){
+                    int kopia = laukiak[i];
+                    laukiak[i]=laukiak[i+1];
+                    laukiak[i+1]=kopia; 
+                }
+            }
+        }
+    }
+
+
 }

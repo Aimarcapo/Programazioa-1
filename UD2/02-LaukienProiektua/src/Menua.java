@@ -1,12 +1,13 @@
 import java.util.Scanner;
 
 public class Menua {
-    private static int LAUKI_KOP = 10;
+    private static final int LAUKI_KOP = 10;
     private static int sortutakoak = 0;
     private static Laukia[] laukiak;
     private static Scanner in = new Scanner(System.in);
     public static void main(String[] args) {
         int aukera = 0;
+        laukiak = new Laukia[LAUKI_KOP];
         do {
             System.out.println();
             System.out.println("MENUA");
@@ -55,20 +56,19 @@ public class Menua {
     //MENURAKO METODOAK
     /**Lauki bat sortzeko metodoa */
     public static void sortu() {
-        laukiak = new Laukia[LAUKI_KOP];
-        int zab, alt;
 
-        if (sortutakoak <= 10) {
+        if (sortutakoak < 10) {
             System.out.println("LAUKI BERRIA SORTZEN");
 
+            laukiak[sortutakoak] = new Laukia();
+
             System.out.print("Sartu zabalera: ");
-            zab = in.nextInt();
+            laukiak[sortutakoak].setZabalera(in.nextInt());
             System.out.println();
             System.out.print("Sartu altuera: ");
-            alt = in.nextInt();
+            laukiak[sortutakoak].setAltuera(in.nextInt());
             System.out.println();
 
-            laukiak[sortutakoak] = new Laukia(zab, alt);
             sortutakoak++;
 
             System.out.println("...");
@@ -80,48 +80,32 @@ public class Menua {
 
     /**Laukien datuak inprimatzeko metodoa */
     public static void inprimatu() {
+        int kopia = sortutakoak;
+        
         System.out.printf("Laukia %10s %10s %10s %10s %15s \n", "Zabalera", "Altuera", "Azalera", "Perimetroa", "Mota");
         System.out.println("=========================================================================================================");
         
-        for(int i = 0, x=1; i<laukiak.length; i++, x++){
-            System.out.printf("%5d %10d %10d %10d %10d %15s \n", x, laukiak[i].getZabalera(), laukiak[i].getAltuera(), laukiak[i].getAzalera(), laukiak[i].getPerimetroa(), laukiak[i].getMota() );
+        for(int x=1, sortutakoak=0; sortutakoak < kopia; sortutakoak++, x++){
+            System.out.printf("%5d %10d %10d %10d %10d %15s \n", x, laukiak[sortutakoak].getZabalera(), laukiak[sortutakoak].getAltuera(), laukiak[sortutakoak].getAzalera(), laukiak[sortutakoak].getPerimetroa(), laukiak[sortutakoak].getMota() );
         }
         System.out.println("");
         System.out.println("...");
+
+        sortutakoak = kopia;
     }
 
     /**Lauki bat marrazteko metodoa */
     private static void marraztu() {
+
         System.out.print("Zer karratu marraztu nahi duzu? ");
         int index = in.nextInt()-1;
         System.out.print("Beteta ala hutsik (B/H)? ");
         String erantzuna = in.next();
 
         if(erantzuna.equals("B")){
-            for(int y = 0; y < laukiak[index].getAltuera(); y++){
-                for (int x = 0; x < laukiak[index].getZabalera(); x++) {
-                    System.out.print("* ");
-                }
-                System.out.println("");
-            }
+            laukiak[index].marraztuBeteta();
         } else if(erantzuna.equals("H")){
-            for(int y = 1; y <= laukiak[index].getAltuera(); y++){
-                if(y==1 || y==laukiak[index].getAltuera()){
-                    for(int x = 1; x <= laukiak[index].getZabalera(); x++){
-                        System.out.print("* ");
-                    }
-                } else {
-                    for (int x = 1; x <= laukiak[index].getZabalera(); x++) {
-                        if(x==1 || x==laukiak[index].getZabalera()){
-                            System.out.print("* ");
-                        } else {
-                            System.out.print("  ");
-                        }
-                    }
-                }
-                
-                System.out.println("");
-            }
+            laukiak[index].marraztuHutsik();
         }        
     }  
     
@@ -132,7 +116,7 @@ public class Menua {
 
         handiena = Laukia.getTheBiggest(laukiak);
 
-        System.out.println( "Laukirik handiena hay da: " + handiena.toString());
+        System.out.println( "Laukirik handiena hau da: " + handiena.toString());
 
     }
 }

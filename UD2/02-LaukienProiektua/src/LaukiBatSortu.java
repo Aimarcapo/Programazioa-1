@@ -3,44 +3,31 @@ import java.util.Scanner;
 public class LaukiBatSortu {
     public static void main(String[] args) {
         Laukia l1 = new Laukia();
-
+        char ikurra;
+        
         Scanner in = new Scanner(System.in);
         System.out.print("Sartu laukiaren zabalera: ");
         l1.setZabalera(in.nextInt());
         System.out.print("Sartu laukiaren altuera: ");
         l1.setAltuera(in.nextInt());
-        in.close();
 
         System.out.println("Lauki " + l1.getMota() + " sortu duzu: => " + l1);
 
         System.out.println("Hona marrazkia beteta:");
-//KONTUZ, GORKA:  for hauek ez dituzu hemen programatu behar baizik eta Laukia klaseko metodotan. 
-//                Hemen metodo horiek "inbokatu" egin behar dituzu
-        for(int y = 0; y < l1.getAltuera(); y++){
-            for (int x = 0; x < l1.getZabalera(); x++) {
-                System.out.print("* ");
-            }
-            System.out.println("");
-        }
-
+        l1.marraztuBeteta();
+        
         System.out.println("Hona marrazkia hutsik:");
+        l1.marraztuHutsik();
 
-        for(int y = 1; y <= l1.getAltuera(); y++){
-            if(y==1 || y==l1.getAltuera()){
-                for(int x = 1; x <= l1.getZabalera(); x++){
-                    System.out.print("* ");
-                }
-            } else {
-                for (int x = 1; x <= l1.getZabalera(); x++) {
-                    if(x==1 || x==l1.getZabalera()){
-                        System.out.print("* ");
-                    } else {
-                        System.out.print("  ");
-                    }
-                }
-            }
-            
-            System.out.println("");
-        }
-    }    
+        System.out.print("Zein ikurrekin nahi duzu laukia bete? ");
+        ikurra = in.next() .charAt(0);
+        l1.marraztuBeteta(ikurra);
+
+        System.out.println();
+
+        System.out.println("Orain laukiBetea metodoari deituta: ");
+        System.out.println(l1.laukiBetea());
+
+        in.close();
+    }
 }
