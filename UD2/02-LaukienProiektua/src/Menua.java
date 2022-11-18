@@ -1,10 +1,11 @@
+import java.util.Arrays;
 import java.util.Scanner;
 
 public class Menua {
     private static final int LAUKI_KOP = 10;
     private static int sortutakoak = 0;
     private static Laukia[] laukiak;
-    private static Scanner in = new Scanner(System.in);
+    public static Scanner in = new Scanner(System.in);
     public static void main(String[] args) {
         int aukera = 0;
         laukiak = new Laukia[LAUKI_KOP];
@@ -16,7 +17,8 @@ public class Menua {
             System.out.println("2.- Laukien taula ikusi");
             System.out.println("3.- Lauki bat marraztu");
             System.out.println("4.- Lauki handiena bilatu");
-            System.out.println("5.- Irten");
+            System.out.println("5.- Arraya automatikoki bete");
+            System.out.println("6.- Irten");
             System.out.println("");
             System.out.print("Aukeratu zenbaki bat: ");
             aukera = in.nextInt();
@@ -42,6 +44,11 @@ public class Menua {
                     handiena();
                     break;
                 case 5:
+                    System.out.println("Bostgarren aukera aukeratu duzu.");
+                    System.out.println("");
+                    arrayaBete(laukiak);
+                    break;
+                case 6:
                     System.out.println("Eskerrik asko programa hau erabiltzeagatik.");
                     break;
                 default:
@@ -118,5 +125,14 @@ public class Menua {
 
         System.out.println( "Laukirik handiena hau da: " + handiena.toString());
 
+    }
+
+    /**Array bat automatikoki betetzeko metodoa. Ausazko baloreak hartuko dute. */
+    public static void arrayaBete(Laukia[] laukiak){
+        for (int i = 0; i < laukiak.length; i++) {
+            laukiak[i]= new Laukia((int)(Math.random()*10+1), (int)(Math.random()*10+1));
+        }
+        System.out.println("Sortu duzun arraya: ");
+        System.out.println(Arrays.toString(laukiak));
     }
 }

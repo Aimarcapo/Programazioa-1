@@ -152,13 +152,13 @@ public class Laukia {
 
     //ARIKETA GEHIGARRIAK
 
-    /**Lauki array bat txikienetik handieneta ordenatzeko */
-    public static void ordenatu(Laukiak[] laukiak){
+    /**Lauki array bat txikienetik handieneta ordenatzeko BubleSort ariketan oinarrituta */
+    public static void ordenatu(Laukia[] laukiak){
         
         for (int a = 0; a < laukiak.length; a++) {
             for (int i = 0; i < laukiak.length-1; i++) {
-                if(laukiak[i] > laukiak[i+1]){
-                    int kopia = laukiak[i];
+                if(laukiak[i].getAzalera() > laukiak[i+1].getAzalera()){
+                    Laukia kopia = laukiak[i];
                     laukiak[i]=laukiak[i+1];
                     laukiak[i+1]=kopia; 
                 }
@@ -166,5 +166,10 @@ public class Laukia {
         }
     }
 
+    /**Lauki bat proportzionalki handitzeko */
+    public static void handitu(Laukia l, int tamaina){
+        l.setAltuera(l.getAltuera()*tamaina);
+        l.setZabalera(l.getZabalera()*tamaina);
+    }
 
 }

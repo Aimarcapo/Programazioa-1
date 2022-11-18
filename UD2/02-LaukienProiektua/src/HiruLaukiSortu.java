@@ -1,4 +1,4 @@
-public class HiruLauki {
+public class HiruLaukiSortu {
     public static void main(String[] args) {
         Laukia l1 = new Laukia(7, 1);
         Laukia l2 = new Laukia(2, 2);
