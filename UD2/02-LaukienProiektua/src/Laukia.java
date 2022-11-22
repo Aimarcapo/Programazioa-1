@@ -4,7 +4,7 @@ public class Laukia {
     private int zabalera;
     private int altuera;
 
-    //KONSTRUCTOREAK
+    //KONSTRUKTOREAK
     /**Ezer ere ez bada sartzen, default baloreak hartuko du. */
     public Laukia(){
         zabalera = 5;
