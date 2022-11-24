@@ -136,7 +136,7 @@ public class Laukia {
         return handiago;
 
     }
-
+    /**Array baten lauki handiena topatzeko metodoa */
     public static Laukia getTheBiggest(Laukia[] lk) {
         
         Laukia max = lk[0];
