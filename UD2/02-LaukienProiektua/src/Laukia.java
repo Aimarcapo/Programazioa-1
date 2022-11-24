@@ -4,7 +4,7 @@ public class Laukia {
     private int zabalera;
     private int altuera;
 
-    //KONSTRUCTOREAK
+    //KONSTRUKTOREAK
     /**Ezer ere ez bada sartzen, default baloreak hartuko du. */
     public Laukia(){
         zabalera = 5;
@@ -136,7 +136,7 @@ public class Laukia {
         return handiago;
 
     }
-    /**Array baten lauki handiena topatzeko metodoa */
+
     public static Laukia getTheBiggest(Laukia[] lk) {
         
         Laukia max = lk[0];
