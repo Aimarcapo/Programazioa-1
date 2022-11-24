@@ -9,6 +9,10 @@ public class Zatikia {
         zenbakitzailea = zenba;
         izendatzailea = izenda;
     }
+    public Zatikia(){
+        zenbakitzailea = (int)(Math.random()*10+1);
+        izendatzailea = (int)(Math.random()*10+1);
+    }
 
     /*GETTER-ak*/
     public int getZenbakitzailea(){
@@ -23,7 +27,7 @@ public class Zatikia {
         zenbakitzailea = zenba;
     }
     public void setIzendatzailea(int izenda){
-        zenbakitzailea = izenda;
+        izendatzailea = izenda;
     }
 
     /*toString */
@@ -34,16 +38,12 @@ public class Zatikia {
     /*BESTELAKO METODOAK */
     /**Metodo honek, bi zatikien arteko biderketaren emaitza bueltatzen du*/
     public static Zatikia biderkatu(Zatikia zat1, Zatikia zat2){
-        Zatikia emaitza = new Zatikia(0, 0);
-        emaitza.setZenbakitzailea(zat1.getZenbakitzailea()*zat2.getZenbakitzailea());
-        emaitza.setIzendatzailea(zat1.getIzendatzailea()*zat2.getIzendatzailea());
+        Zatikia emaitza = new Zatikia((zat1.getZenbakitzailea()*zat2.getZenbakitzailea()), (zat1.getIzendatzailea()*zat2.getIzendatzailea()));
         return emaitza;
     }
     /**Metodo honek, bi zatikien arteko batuketaren emaitza bueltatzen du*/
     public static Zatikia batu(Zatikia zat1, Zatikia zat2){
-        Zatikia emaitza = new Zatikia(0, 0);
-        emaitza.setZenbakitzailea((zat1.getZenbakitzailea()*zat2.getIzendatzailea())+(zat2.getZenbakitzailea()*zat1.getIzendatzailea()));
-        emaitza.setIzendatzailea(zat1.getIzendatzailea()*zat2.getIzendatzailea());
+        Zatikia emaitza = new Zatikia(((zat1.getZenbakitzailea()*zat2.getIzendatzailea())+(zat2.getZenbakitzailea()*zat1.getIzendatzailea())), (zat1.getIzendatzailea()*zat2.getIzendatzailea()));
         return emaitza;
     }
     /**Metodo honek, zatiki bat gehitzen dio erabilitako zatikiari*/
@@ -54,7 +54,7 @@ public class Zatikia {
     /**Metodo honek, zatiki baten hamartar baliokidea bueltatzen du */
     public double hamartarBaliokidea(){
         double hamartarra;
-        hamartarra = this.getZenbakitzailea()/this.getIzendatzailea();
+        hamartarra = (double)this.getZenbakitzailea()/(double)this.getIzendatzailea();
         return hamartarra;
     }
     /**Metodo honek, bi zatikien arteko konparazioa (handia/txikiagoa) 
@@ -72,11 +72,18 @@ public class Zatikia {
     }
     /**Metodo honek, zatiki bat ahalik eta gehien sinplifikatzen du */
     public void sinplifikatu(){
-        for (int i = 2; i != this.getIzendatzailea() || i != this.getZenbakitzailea(); i++) {
+        int txikiena;
+
+        if((this.getZenbakitzailea()) > (this.getIzendatzailea())){
+            txikiena = this.getIzendatzailea();
+        } else {
+            txikiena = this.getZenbakitzailea();
+        }
+        System.out.println(txikiena);
+        for (int i = 2; i <= txikiena; i++) {
             if(this.getZenbakitzailea() % i == 0 && this.getIzendatzailea() % i !=0){
-                this.setIzendatzailea(this.getIzendatzailea() / 2);
-                this.setZenbakitzailea(this.getZenbakitzailea() / 2);
-                break;
+                this.setIzendatzailea(this.getIzendatzailea() / i);
+                this.setZenbakitzailea(this.getZenbakitzailea() / i);
             }
         }
     }
