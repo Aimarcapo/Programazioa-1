@@ -14,6 +14,24 @@ public class Zatikia {
         izendatzailea = (int)(Math.random()*10+1);
     }
 
+    /**Metodo honek, sartutako String-a zatiki bezala hartuko du. KONSTRUKTOREA*/
+    public Zatikia(String zatIdatzia) {
+
+        int barra = zatIdatzia.indexOf("/");
+        int strLen = zatIdatzia.length();
+
+        String strGoikoa = zatIdatzia.substring(0, barra);
+        String strBehekoa = zatIdatzia.substring(barra + 1, strLen);
+
+        int zenbakitzailea = Integer.parseInt(strGoikoa);
+
+        int izendatzailea = Integer.parseInt(strBehekoa);
+
+        // Integer.toString(strGoikoa);
+        this.izendatzailea = izendatzailea;
+        this.zenbakitzailea = zenbakitzailea;
+    }
+
     /*GETTER-ak*/
     public int getZenbakitzailea(){
         return zenbakitzailea;
@@ -32,7 +50,7 @@ public class Zatikia {
 
     /*toString */
     public String toString(){
-        return "Zatikia[" + zenbakitzailea + "/" + izendatzailea + "]";
+        return "[" + zenbakitzailea + "/" + izendatzailea + "]";
     }
 
     /*BESTELAKO METODOAK */
@@ -70,6 +88,41 @@ public class Zatikia {
 
         return bigger;
     }
+    /**Metodo honek, zatikien array baten zatikiak ordenatzen ditu. */
+    public static void zatikiakOrdenatu(Zatikia[] zatikiak){
+        for (int a = 0; a < zatikiak.length; a++) {
+            for (int i = 0; i < zatikiak.length-1; i++) {
+                if(zatikiak[i].hamartarBaliokidea() > zatikiak[i+1].hamartarBaliokidea()){
+                    Zatikia kopia = zatikiak[i];
+                    zatikiak[i]=zatikiak[i+1];
+                    zatikiak[i+1]=kopia; 
+                }
+            }
+        }
+    }
+    /**Metodo honek, esaten du, erabiltzen ari den zatikia, bestearekiko baliokidea den ala ez */
+    public boolean isBaliokidea(Zatikia besteZatikiBat){
+
+        boolean baliokidea;
+
+        if(this.hamartarBaliokidea() == besteZatikiBat.hamartarBaliokidea()){
+            baliokidea = true;
+        } else{
+            baliokidea = false;
+        }
+
+        return baliokidea;
+    }
+    /**Metodo honek, bi zenbakien mkt ateratzen du */
+    public static int mkt(int n1, int n2){
+        
+        return mkt;
+    }  
+    /**Metodo honek, bi zenbakien zkh ateratzen du */
+    public static int zkh(int n1, int n2){
+        
+        return zkh;
+    }    
     /**Metodo honek, zatiki bat ahalik eta gehien sinplifikatzen du */
     public void sinplifikatu(){
         int txikiena;
@@ -87,33 +140,4 @@ public class Zatikia {
             }
         }
     }
-    /**Metodo honek, sartutako String-a zatiki bezala hartuko du. KONSTRUKTOREA*/
-    public Zatikia(String zatidatzia){
-        
-    }
-    /**Metodo honek, zatikien array baten zatikiak ordenatzen ditu. */
-    public void zatikiakOrdenatu(Zatikia[] zatikiak){
-        for (int a = 0; a < zatikiak.length; a++) {
-            for (int i = 0; i < zatikiak.length-1; i++) {
-                if(zatikiak[i].hamartarBaliokidea() > zatikiak[i+1].hamartarBaliokidea()){
-                    Zatikia kopia = zatikiak[i];
-                    zatikiak[i]=zatikiak[i+1];
-                    zatikiak[i+1]=kopia; 
-                }
-            }
-        }
-    }
-    /**Metodo honek, esaten du, erabiltzen ari den zatikia, bestearekiko baliokidea den ala ez */
-    public boolean isBaliokidea(Zatikia besteZatikiBat){
-        boolean baliokidea;
-
-        if(this.hamartarBaliokidea() == besteZatikiBat.hamartarBaliokidea()){
-            baliokidea = true;
-        } else{
-            baliokidea = false;
-        }
-
-        return baliokidea;
-    }
-
 }

@@ -8,7 +8,8 @@ public class Prog3 {
         int[] totala = {0, 0};
         char jarraitu;
         boolean[] kanpoan = {false, false};
-        boolean[] sorteTxarra;
+        boolean[][] sorteTxarra;
+        sorteTxarra = new boolean[2][100];
         int[] tirada = {0, 0};
 
         System.out.println("Jola honek, partxis moduko, 2 jokalarien arteko lehiaketa bat da. 35-era heltzen duen lehenengoa partida irabazten du. Kontuan izan, hiru aldiz segido 6 ateratzen baduzu, etxerantz bueltatuko zarela.");
@@ -39,25 +40,25 @@ public class Prog3 {
                 System.out.print("=> " + erantzuna);
 
                 if(kanpoan[i-1] == true){
-                    erantzuna = 6;
                     totala[i-1] = totala[i-1] + erantzuna;
                     System.out.println("=> " + i + ". jokalariaren posizioa: " + totala[i-1]);
+                    tirada[i-1]++;
 
                     /*FALTA: DEBUG EGIN ARAZOA IKUSTEKO */
                     /*666 ateratzerakoan etxera bueltatzeko*/
-                    /*sorteTxarra = new boolean[tirada[i-1]];
                     if(erantzuna == 6){
-                        sorteTxarra[tirada[i-1]] = true;
+                        sorteTxarra[i-1][tirada[i-1]-1] = true;
                     } else {
-                        sorteTxarra[tirada[i-1]] = false;
+                        sorteTxarra[i-1][tirada[i-1]-1] = false;
                     }
-                    if(tirada[i-1] > 3){
-                        if((sorteTxarra[tirada[i-1]-2] = true) && (sorteTxarra[tirada[i-1]-1] = true) && (sorteTxarra[tirada[i-1]] = true)){
-                            System.out.println("OOOOH...666 atera duzu...");
+                    if(tirada[i-1] >= 3){
+                        if((sorteTxarra[i-1][tirada[i-1]-3] == true) && (sorteTxarra[i-1][tirada[i-1]-2] == true) && (sorteTxarra[i-1][tirada[i-1]-1] == true)){
+                            System.out.println("OOOOH...666 atera dituzu...");
                             totala[i-1]=0;
+                            kanpoan[i-1] = false;
                         }
                     }
-                    tirada[i-1]++; */
+                     
                 }else{
                     if(erantzuna == 5){
                         System.out.println(" => Zorionak! fitxa atera duzu.");
