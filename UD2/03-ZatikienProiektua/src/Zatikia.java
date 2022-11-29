@@ -113,16 +113,56 @@ public class Zatikia {
 
         return baliokidea;
     }
-    /**Metodo honek, bi zenbakien mkt ateratzen du */
+    /**Metodo honek, zenbaki bat faktorizatzen du array batean*/
+    public static int[] faktorizatu(int n){
+        int cont = 0;
+        int temp = n;
+        while(temp > 1){
+            for(int i = 2; i<=temp; i++){
+                if(temp%i == 0){
+                    temp /= i;
+                    cont++;
+                    break;
+                }
+            }
+        }
+
+        int[] emaitza = new int[cont];
+        for(int a = 0; n > 1; a++){
+            for(int i = 2; i<=n; i++){
+                if(n%i == 0){
+                    n /= i;
+                    emaitza[a] = i;
+                    break;
+                }
+            }
+        }
+
+        return emaitza;
+    }
+    /**Metodo honek, bi zenbakien mkt-a lortzen du */
     public static int mkt(int n1, int n2){
-        
+        int mkt=1;
+        int[] fakt1 = Zatikia.faktorizatu(n1);
+        int[] fakt2 = Zatikia.faktorizatu(n2);
+
+        for(int i = 0; i < fakt1.length; i++){
+            mkt *= fakt1[i];
+        }
+        for(int i = 0; i < fakt2.length; i++){
+            for(int a = 0; a < fakt2.length; a++){
+                if(fakt1[i] == fakt2[a]){
+                    fakt2[a] = 1;
+                    break;
+                }
+            }
+        }
+        for(int i = 0; i < fakt2.length; i++){
+            mkt *= fakt2[i];
+        }
+
         return mkt;
-    }  
-    /**Metodo honek, bi zenbakien zkh ateratzen du */
-    public static int zkh(int n1, int n2){
-        
-        return zkh;
-    }    
+    }
     /**Metodo honek, zatiki bat ahalik eta gehien sinplifikatzen du */
     public void sinplifikatu(){
         int txikiena;
