@@ -3,12 +3,12 @@ package mathRandom;
 import java.util.Scanner;
 
 public class Jolasa2 {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws InterruptedException {
         final int MAX = 100;
         int respuesta, aleatorio = 0;
         int modo;
         String seguir = "";
-        int total = 0;
+        
 
         Scanner in = new Scanner(System.in);
 
@@ -19,6 +19,7 @@ public class Jolasa2 {
         System.out.println("");
 
         do {
+            int total = 0;
             System.out.println("ELIGE EN QUE MODO QUIERES JUGAR:");
             System.out.println("1.- Ganable");
             System.out.println("2.- Invencible");
@@ -50,7 +51,12 @@ public class Jolasa2 {
                     break;
                 }
 
-                System.out.println("Déjame pensar...");
+                System.out.print("Déjame pensar");
+                for(int i = 0; i < 3; i++){
+                    Thread.sleep(500);
+                    System.out.print(". ");
+                }
+                System.out.println("");
 
                 if (modo == 1) {
                     aleatorio = modo1(aleatorio, total);

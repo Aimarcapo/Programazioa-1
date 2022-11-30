@@ -1,3 +1,4 @@
+package model;
 public class Zatikia {
 
     /*ALDAGAI PRIBATUAK SORTU*/
@@ -149,7 +150,7 @@ public class Zatikia {
         for(int i = 0; i < fakt1.length; i++){
             mkt *= fakt1[i];
         }
-        for(int i = 0; i < fakt2.length; i++){
+        for(int i = 0; i < fakt1.length; i++){
             for(int a = 0; a < fakt2.length; a++){
                 if(fakt1[i] == fakt2[a]){
                     fakt2[a] = 1;
@@ -163,21 +164,56 @@ public class Zatikia {
 
         return mkt;
     }
-    /**Metodo honek, zatiki bat ahalik eta gehien sinplifikatzen du */
-    public void sinplifikatu(){
+    /**Metodo honek, bi zenbakien zkh-a lortzen du */
+    public static int zkh(int n1, int n2){
+        int zkh = 2;
         int txikiena;
 
-        if((this.getZenbakitzailea()) > (this.getIzendatzailea())){
-            txikiena = this.getIzendatzailea();
+        if(n1<n2){
+            txikiena = n1;
         } else {
-            txikiena = this.getZenbakitzailea();
+            txikiena = n2;
         }
-        System.out.println(txikiena);
-        for (int i = 2; i <= txikiena; i++) {
-            if(this.getZenbakitzailea() % i == 0 && this.getIzendatzailea() % i !=0){
-                this.setIzendatzailea(this.getIzendatzailea() / i);
-                this.setZenbakitzailea(this.getZenbakitzailea() / i);
+
+        while(zkh<=txikiena){
+            if(n1%zkh==0 && n2%zkh==0){
+                break;
+            }else{
+                zkh++;
             }
         }
+        return zkh;
+    }
+    /**Metodo honek, zatiki bat ahalik eta gehien sinplifikatzen du */
+    public Zatikia sinplifikatu(){
+        int[] faktGoi = Zatikia.faktorizatu(this.getZenbakitzailea());
+        int[] faktBehe = Zatikia.faktorizatu(this.getIzendatzailea());
+
+        for(int i = 0; i < faktGoi.length; i++){
+            for(int a = 0; a < faktBehe.length; a++){
+                if(faktGoi[i] == faktBehe[a]){
+                    faktBehe[a] = 1;
+                    faktGoi[i] = 1;
+                    break;
+                }
+            }
+        }
+        Zatikia emaitza;
+        int totala = 1;
+        emaitza = new Zatikia(1, 1);
+
+        for (int i = 0; i < faktGoi.length; i++) {
+            totala *= faktGoi[i];
+        }
+        emaitza.setZenbakitzailea(totala);
+
+        totala = 1;
+
+        for (int i = 0; i < faktBehe.length; i++) {
+            totala *= faktBehe[i];
+        }
+        emaitza.setIzendatzailea(totala);
+
+        return emaitza;
     }
 }

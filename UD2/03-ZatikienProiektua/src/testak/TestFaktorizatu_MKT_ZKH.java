@@ -1,5 +1,9 @@
+package testak;
+
 import java.util.Arrays;
 import java.util.Scanner;
+
+import model.Zatikia;
 
 public class TestFaktorizatu_MKT_ZKH {
     public static void main(String[] args) {
@@ -18,6 +22,7 @@ public class TestFaktorizatu_MKT_ZKH {
         System.out.println("Lehenengo zenbakiaren faktoreak: " + Arrays.toString(emaitza));
         
         System.out.println("Bi zenbakien mkt: " + Zatikia.mkt(n1, n2));
+        System.out.println("Bi zenbakien zkh: " + Zatikia.zkh(n1, n2));
         
     }
 }

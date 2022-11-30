@@ -1,5 +1,9 @@
+package testak;
+
 import java.util.Arrays;
 import java.util.Scanner;
+
+import model.Zatikia;
 
 public class TestZatikiakOrdenatu {
     public static void main(String[] args) {

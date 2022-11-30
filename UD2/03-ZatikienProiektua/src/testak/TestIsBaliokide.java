@@ -1,6 +1,10 @@
+package testak;
+
 import java.util.Scanner;
 
-public class TesterIsBiggerThan {
+import model.Zatikia;
+
+public class TestIsBaliokide {
     public static void main(String[] args) {
         Zatikia zat1, zat2;
 
@@ -11,10 +15,10 @@ public class TesterIsBiggerThan {
         zat2 = new Zatikia(in.next());
         in.close();
 
-        if(zat1.isBiggerThan(zat2)){
-            System.out.println(zat1 + " handiagoa da.");
+        if(zat1.isBaliokidea(zat2)){
+            System.out.println("Baliokideak dira");
         } else{
-            System.out.println(zat2 + " handiagoa da.");
+            System.out.println("Ez dira baliokideak");
         }
-    }
+    }   
 }

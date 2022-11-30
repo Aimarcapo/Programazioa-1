@@ -1,4 +1,8 @@
+package testak;
+
 import java.util.Scanner;
+
+import model.Zatikia;
 
 public class TestZatikia {
     public static void main(String[] args) {
