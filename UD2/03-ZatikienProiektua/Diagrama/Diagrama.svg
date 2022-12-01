@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.0//EN" "http://www.w3.org/TR/2001/PR-SVG-20010719/DTD/svg10.dtd">
+<svg width="28cm" height="42cm" viewBox="-3 -371 556 831" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <g>
+    <rect style="fill: #ffffff" x="-1.16338" y="-369.824" width="364.2" height="28"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="-1.16338" y="-369.824" width="364.2" height="28"/>
+    <text font-size="16" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:700" x="180.937" y="-350.824">Zatikia</text>
+    <rect style="fill: #ffffff" x="-1.16338" y="-341.824" width="364.2" height="36"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="-1.16338" y="-341.824" width="364.2" height="36"/>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="1.83662" y="-327.824">-zenbakitzailea: int</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="1.83662" y="-311.824">-izendatzailea: int</text>
+    <rect style="fill: #ffffff" x="-1.16338" y="-305.824" width="364.2" height="308"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="-1.16338" y="-305.824" width="364.2" height="308"/>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="1.83662" y="-291.824">+Zatikia(zenba:int,izenda:int)</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="1.83662" y="-275.824">+Zatikia()</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="1.83662" y="-259.824">+Zatikia(zatIdatzia:String)</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="1.83662" y="-243.824">+getZenbakitzailea(): int</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="1.83662" y="-227.824">+getIzendatzailea(): int</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="1.83662" y="-211.824">+setZenbakitzailea(zenba:int): void</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="1.83662" y="-195.824">+setIzendatzaila(izenda:int): void</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="1.83662" y="-179.824">+toString(): String</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="1.83662" y="-163.824">+biderkatu(zat1:Zatikia,zat2:Zatikia): Zatikia</text>
+    <line style="fill: none; fill-opacity:0; stroke-width: 1; stroke: #000000" x1="1.83662" y1="-162.224" x2="356.037" y2="-162.224"/>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="1.83662" y="-147.824">+batu(zat1:Zatikia,zat2:Zatikia): Zatikia</text>
+    <line style="fill: none; fill-opacity:0; stroke-width: 1; stroke: #000000" x1="1.83662" y1="-146.224" x2="317.537" y2="-146.224"/>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="1.83662" y="-131.824">+batu(besteZatBat:Zatikia): void</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="1.83662" y="-115.824">+hamartarBaliokidea(): double</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="1.83662" y="-99.8236">+isBiggerThan(besteZatikiBat:Zatikia): boolean</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="1.83662" y="-83.8236">+zatikiakOrdenatu(zatikiak:Zatikia[]): void</text>
+    <line style="fill: none; fill-opacity:0; stroke-width: 1; stroke: #000000" x1="1.83662" y1="-82.2236" x2="332.937" y2="-82.2236"/>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="1.83662" y="-67.8236">+isBaliokidea(besteZatikiBat:Zatikia): boolean</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="1.83662" y="-51.8236">+faktorizatu(n:int): int[]</text>
+    <line style="fill: none; fill-opacity:0; stroke-width: 1; stroke: #000000" x1="1.83662" y1="-50.2236" x2="202.037" y2="-50.2236"/>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="1.83662" y="-35.8236">+mkt(n1:int,n2:int): int</text>
+    <line style="fill: none; fill-opacity:0; stroke-width: 1; stroke: #000000" x1="1.83662" y1="-34.2236" x2="186.637" y2="-34.2236"/>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="1.83662" y="-19.8236">+zkh(n1:int,n2:int): int</text>
+    <line style="fill: none; fill-opacity:0; stroke-width: 1; stroke: #000000" x1="1.83662" y1="-18.2236" x2="186.637" y2="-18.2236"/>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="1.83662" y="-3.82361">+sinplifikatu(): Zatikia</text>
+  </g>
+  <g>
+    <rect style="fill: #ffffff" x="0.354881" y="51.0553" width="210.2" height="28"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="0.354881" y="51.0553" width="210.2" height="28"/>
+    <text font-size="16" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:700" x="105.455" y="70.0553">Ariketa</text>
+    <rect style="fill: #ffffff" x="0.354881" y="79.0553" width="210.2" height="8"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="0.354881" y="79.0553" width="210.2" height="8"/>
+    <rect style="fill: #ffffff" x="0.354881" y="87.0553" width="210.2" height="20"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="0.354881" y="87.0553" width="210.2" height="20"/>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="3.35488" y="101.055">+main(args:String[]): void</text>
+  </g>
+  <g>
+    <rect style="fill: #ffffff" x="-0.189494" y="200.995" width="210.2" height="28"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="-0.189494" y="200.995" width="210.2" height="28"/>
+    <text font-size="16" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:700" x="104.911" y="219.995">Azterketa</text>
+    <rect style="fill: #ffffff" x="-0.189494" y="228.995" width="210.2" height="8"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="-0.189494" y="228.995" width="210.2" height="8"/>
+    <rect style="fill: #ffffff" x="-0.189494" y="236.995" width="210.2" height="20"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="-0.189494" y="236.995" width="210.2" height="20"/>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="2.81051" y="250.995">+main(args:String[]): void</text>
+  </g>
+  <g>
+    <rect style="fill: #ffffff" x="0.458923" y="336.867" width="210.2" height="28"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="0.458923" y="336.867" width="210.2" height="28"/>
+    <text font-size="16" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:700" x="105.559" y="355.867">Kalkulagailua</text>
+    <rect style="fill: #ffffff" x="0.458923" y="364.867" width="210.2" height="8"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="0.458923" y="364.867" width="210.2" height="8"/>
+    <rect style="fill: #ffffff" x="0.458923" y="372.867" width="210.2" height="20"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="0.458923" y="372.867" width="210.2" height="20"/>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="3.45892" y="386.867">+main(args:String[]): void</text>
+  </g>
+  <g>
+    <rect style="fill: #ffffff" x="306.909" y="21.8984" width="210.2" height="28"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="306.909" y="21.8984" width="210.2" height="28"/>
+    <text font-size="16" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:700" x="412.009" y="40.8984">TesterIsBiggerThan</text>
+    <rect style="fill: #ffffff" x="306.909" y="49.8984" width="210.2" height="8"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="306.909" y="49.8984" width="210.2" height="8"/>
+    <rect style="fill: #ffffff" x="306.909" y="57.8984" width="210.2" height="20"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="306.909" y="57.8984" width="210.2" height="20"/>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="309.909" y="71.8984">+main(args:String[]): void</text>
+  </g>
+  <g>
+    <rect style="fill: #ffffff" x="306.898" y="101.399" width="245.1" height="28"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="306.898" y="101.399" width="245.1" height="28"/>
+    <text font-size="16" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:700" x="429.448" y="120.399">TestFaktorizatu_MKT_ZKH</text>
+    <rect style="fill: #ffffff" x="306.898" y="129.399" width="245.1" height="8"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="306.898" y="129.399" width="245.1" height="8"/>
+    <rect style="fill: #ffffff" x="306.898" y="137.399" width="245.1" height="20"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="306.898" y="137.399" width="245.1" height="20"/>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="309.898" y="151.399">+main(args:String[]): void</text>
+  </g>
+  <g>
+    <rect style="fill: #ffffff" x="307.77" y="179.427" width="210.2" height="28"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="307.77" y="179.427" width="210.2" height="28"/>
+    <text font-size="16" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:700" x="412.87" y="198.427">TestIsBaliokide</text>
+    <rect style="fill: #ffffff" x="307.77" y="207.427" width="210.2" height="8"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="307.77" y="207.427" width="210.2" height="8"/>
+    <rect style="fill: #ffffff" x="307.77" y="215.427" width="210.2" height="20"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="307.77" y="215.427" width="210.2" height="20"/>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="310.77" y="229.427">+main(args:String[]): void</text>
+  </g>
+  <g>
+    <rect style="fill: #ffffff" x="306.933" y="253.564" width="210.2" height="28"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="306.933" y="253.564" width="210.2" height="28"/>
+    <text font-size="16" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:700" x="412.033" y="272.564">TestSinplifikatu</text>
+    <rect style="fill: #ffffff" x="306.933" y="281.564" width="210.2" height="8"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="306.933" y="281.564" width="210.2" height="8"/>
+    <rect style="fill: #ffffff" x="306.933" y="289.564" width="210.2" height="20"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="306.933" y="289.564" width="210.2" height="20"/>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="309.933" y="303.564">+main(args:String[]): void</text>
+  </g>
+  <g>
+    <rect style="fill: #ffffff" x="307.57" y="327.818" width="210.2" height="28"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="307.57" y="327.818" width="210.2" height="28"/>
+    <text font-size="16" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:700" x="412.67" y="346.818">TestZatikia</text>
+    <rect style="fill: #ffffff" x="307.57" y="355.818" width="210.2" height="8"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="307.57" y="355.818" width="210.2" height="8"/>
+    <rect style="fill: #ffffff" x="307.57" y="363.818" width="210.2" height="20"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="307.57" y="363.818" width="210.2" height="20"/>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="310.57" y="377.818">+main(args:String[]): void</text>
+  </g>
+  <g>
+    <rect style="fill: #ffffff" x="307.558" y="403.134" width="210.2" height="28"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="307.558" y="403.134" width="210.2" height="28"/>
+    <text font-size="16" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:700" x="412.658" y="422.134">TestZatikiakOrdenatu</text>
+    <rect style="fill: #ffffff" x="307.558" y="431.134" width="210.2" height="8"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="307.558" y="431.134" width="210.2" height="8"/>
+    <rect style="fill: #ffffff" x="307.558" y="439.134" width="210.2" height="20"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="307.558" y="439.134" width="210.2" height="20"/>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="310.558" y="453.134">+main(args:String[]): void</text>
+  </g>
+</svg>
