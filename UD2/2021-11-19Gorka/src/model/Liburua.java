@@ -1,5 +1,7 @@
 package model;
 
+import java.util.ArrayList;
+
 public class Liburua {
 
     /**
@@ -168,7 +170,7 @@ public class Liburua {
     public String getPrezioaIzartxotan() {
         //METODO HAU ALDATU BEHAR DUZU
         int i = 0;
-        String izarrak = "*";
+        String izarrak = "";
         while(i<=this.getPrezioa()){
             i++;
         }
@@ -215,6 +217,18 @@ public class Liburua {
         return liburuak;
     }
 
+    public static ArrayList<Liburua> getLiburuenArrayLista(){
+        ArrayList<Liburua> liburuak = new ArrayList<Liburua>();
+        liburuak.add(new Liburua("El bosque oscuro", "Cixin Liu", 408, 2008, "FIKZIOA", 'g', 12.95));
+        liburuak.add(new Liburua("The Hobbit", "J.R.R. Tolkien", 413, 1937, "fikzioa", 'i', 20.95));
+        liburuak.add(new Liburua("The Lord of the Rings", "J.R.R. Tolkien", 122, 1954, "FIkziOA", 'I', 15.95));
+        liburuak.add(new Liburua("Matxinsaltoen belarriak", "Unai Elorriaga", 122, 2006, "?", 'E', 10.95));
+        liburuak.add(new Liburua("Las brujas", "Roald Dahl", 222, 1983, "Fikzioa", 'G', 10.95));
+        liburuak.add(new Liburua("Boy", "Roald Dahl", 122, 1984, "HISTORIKOA", 'I', 5.95));
+        liburuak.add(new Liburua("Obabakoak", "Bernardo Atxaga", 392, 1988, "FIKZIOA", 'E', 22.50));
+        return liburuak;
+    }
+
     /**
      * Liburua klaseko objektu bat String motako formatu honetan bueltatzen du:
      * izenburua (egilea)
@@ -224,7 +238,4 @@ public class Liburua {
          //METODO HAU ALDATU BEHAR DUZU
         return this.izenburua + " (" + this.egilea + ")";
     }
-
-
-
 }

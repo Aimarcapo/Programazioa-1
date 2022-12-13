@@ -46,6 +46,7 @@ public class ProgramaNagusia {
                     System.out.println("Aukera okerra. Saiatu berriz.");
             }
         } while (aukera != 5);
+        sc.close();
     }
 
     /**
