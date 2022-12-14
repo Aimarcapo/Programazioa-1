@@ -96,8 +96,7 @@ public class Liburua {
      */
     public void setGaia(String gaia) {
         //METODO HAU OSATU BEHAR DUZU
-        gaia.toLowerCase();
-        switch(gaia){
+        switch(gaia.toLowerCase()){
             case "fikzioa":
                 this.gaia = "Fikzioa";
                 break;

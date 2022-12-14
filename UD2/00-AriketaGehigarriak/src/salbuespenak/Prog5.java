@@ -9,14 +9,14 @@ public class Prog5 {
         int[] zenbakiak = {1, 15, 2};
         Scanner sc = new Scanner(System.in);
         int zenbatgarren;
-        boolean egina = false;
+        boolean egia = false;
         do {
             try {
 
                 System.out.print("Zenbatgarren zenbakia ikusi nahi duzu? ");
                 zenbatgarren = sc.nextInt();
                 System.out.println(zenbakiak[zenbatgarren]);
-                egina = true;
+                egia = true;
             } catch (InputMismatchException ex) {
                 System.out.println("Zenbaki bat sartu behar duzu.");
                 sc.next(); //scannerrean geratu dan elementua hustuteko
@@ -27,7 +27,7 @@ public class Prog5 {
                 System.out.println(ex.getMessage());
             }
 
-        } while (!egina);
+        } while (!egia);
         sc.close();
     }
 
