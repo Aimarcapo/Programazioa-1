@@ -58,7 +58,6 @@ public class Prog3 {
                             kanpoan[i-1] = false;
                         }
                     }
-                     
                 }else{
                     if(erantzuna == 5){
                         System.out.println(" => Zorionak! fitxa atera duzu.");
