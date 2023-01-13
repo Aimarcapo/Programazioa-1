@@ -58,7 +58,7 @@ public class MyPoint {
     public double distance(MyPoint another){
         MyPoint distTotal = new MyPoint();
         distTotal.setX(this.x - another.x);
-        distTotal.setX(this.y - another.y);
+        distTotal.setY(this.y - another.y);
         
         double distantzia;
         distantzia = Math.sqrt((Math.pow(distTotal.x, 2)) + (Math.pow(distTotal.y, 2)));
@@ -68,7 +68,7 @@ public class MyPoint {
     public double distance(int x, int y){
         MyPoint distTotal = new MyPoint();
         distTotal.setX(this.x - x);
-        distTotal.setX(this.y - y);
+        distTotal.setY(this.y - y);
         
         double distantzia;
         distantzia = Math.sqrt((Math.pow(distTotal.x, 2)) + (Math.pow(distTotal.y, 2)));
