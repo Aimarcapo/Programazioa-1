@@ -8,6 +8,8 @@ public class TestEquals {
 
         if (p1.equals(p2)) {
             System.out.println("Espazioko puntu berdina adierazten dute.");
+        } else {
+            System.out.println("EZ dira berdinak.");
         }
     }
 }
