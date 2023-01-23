@@ -1,7 +1,7 @@
 package tests;
 
+import exekutagarriak.MyTriangle;
 import model.MyPoint;
-import model.MyTriangle;
 
 public class TestMyTriangle {
     public static void main(String[] args) {

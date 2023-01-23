@@ -1,4 +1,6 @@
-package model;
+package exekutagarriak;
+
+import model.MyPoint;
 
 public class MyTriangle {
     //ALDAGAIAK EZARRI

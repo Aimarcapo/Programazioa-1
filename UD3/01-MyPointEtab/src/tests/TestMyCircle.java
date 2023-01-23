@@ -1,6 +1,6 @@
 package tests;
 
-import model.MyCircle;
+import exekutagarriak.MyCircle;
 import model.MyPoint;
 
 public class TestMyCircle {

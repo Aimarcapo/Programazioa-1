@@ -1,6 +1,6 @@
 package tests;
 
-import model.MyRectangle;
+import exekutagarriak.MyRectangle;
 import model.MyPoint;
 
 public class TestMyRectangle {
