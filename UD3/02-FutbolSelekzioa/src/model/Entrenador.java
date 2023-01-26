@@ -1,10 +1,6 @@
 package model;
 
 public class Entrenador extends IntegranteSeleccion{
-    public Entrenador(int id, String nombre, String apellidos, int edad) {
-        super(id, nombre, apellidos, edad);
-        //TODO Auto-generated constructor stub
-    }
 
     private String idFederacion;
 

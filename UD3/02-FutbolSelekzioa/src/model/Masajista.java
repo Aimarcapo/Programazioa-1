@@ -2,10 +2,6 @@ package model;
 
 public class Masajista extends IntegranteSeleccion {
 
-    public Masajista(int id, String nombre, String apellidos, int edad) {
-        super(id, nombre, apellidos, edad);
-    }
-
     private String titulación;
     private int añosExperiencia;
     
