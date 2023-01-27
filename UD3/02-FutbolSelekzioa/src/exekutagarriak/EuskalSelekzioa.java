@@ -1,14 +1,22 @@
 package exekutagarriak;
 
+import java.util.ArrayList;
+
+import javax.xml.stream.events.EntityDeclaration;
+
 import model.Demarkazioa;
+import model.Entrenador;
 import model.Futbolista;
+import model.IntegranteSeleccion;
+import model.Masajista;
 
 /** Programa honetan Euskal Selekzioko datuekin egingo dugu lan.
  *  Iturria: https://es.wikipedia.org/wiki/Selecci%C3%B3n_de_f%C3%BAtbol_de_Euskadi#Plantilla
  */
 public class EuskalSelekzioa {
     
-    public static int azkenId = 0; 
+    public static int azkenId = 0; //Erabili den azken identifikadorea
+    public static ArrayList<IntegranteSeleccion> selekzioa;
     
     /** Programa honek metodo desberdinei deituko die banan banan. 
      *  Beharbada ez diozu koherentzia handirik topatuko programa osoari. 
@@ -17,7 +25,9 @@ public class EuskalSelekzioa {
     public static void main(String[] args) {
         
         futbolariBat();
+        System.out.println("\n\n");
         bestePartaideBatzukSortu();
+        System.out.println("\n\n");
         selekzioOsoaSortu();
         int ezabatzekoIda = 4;
         if (partaideaEzabatu(ezabatzekoIda)){
@@ -35,8 +45,8 @@ public class EuskalSelekzioa {
      *  Amaitzeko, Villalibre entrenatzen hasiko da.
     */
     public static void futbolariBat(){
-        //Fala da id automatikoa ezartzea
-        Futbolista Asier = new Futbolista(azkenId, "Asier", "Villalibre", 23, 11, Demarkazioa.DEL);
+        //Falta da id automatikoa ezartzea
+        Futbolista Asier = new Futbolista(++azkenId, "Asier", "Villalibre", 23, 11, Demarkazioa.DEL);
         System.out.println("Asierren erregistroa sortu da:");
         System.out.println(Asier);
         System.out.println("...\nEntrenar metodoa erabili ondoren: ");
@@ -52,7 +62,21 @@ public class EuskalSelekzioa {
      * Objektu bakoitza sortu ondoren, bere datuak inprimatu eta kontzentratu eta bidaiatuko dute
      */
     public static void bestePartaideBatzukSortu(){
-        
+        Entrenador Clemente = new Entrenador(++azkenId, "Javier", "Clemente", 45, "a00");
+        Masajista Sertxiberrieta = new Masajista(++azkenId, "Iñaki", "Sertxiberrieta", 35, "Bai", 5);
+        IntegranteSeleccion Etxeburu = new IntegranteSeleccion(++azkenId, "Ander", "Etxeburu", 25);
+        System.out.println("Entrenatzailea:");
+        System.out.println("\t" + Clemente);
+        Clemente.concentrarse();
+        Clemente.viajar();
+        System.out.println("Masajista:");
+        System.out.println("\t" + Sertxiberrieta);
+        Sertxiberrieta.concentrarse();
+        Sertxiberrieta.viajar();
+        System.out.println("Integrante:");
+        System.out.println("\t" + Etxeburu);
+        Etxeburu.concentrarse();
+        Etxeburu.viajar();
     }
     
     
@@ -62,6 +86,25 @@ public class EuskalSelekzioa {
      */
     public static void selekzioOsoaSortu(){
         
+        selekzioa.add(new Futbolista(++azkenId, "Aitor", "Fernández", 31, 1, Demarkazioa.POR));
+        selekzioa.add(new Futbolista(++azkenId, "Unai", "Bustinza", 30, 2, Demarkazioa.DEF));
+        selekzioa.add(new Futbolista(++azkenId, "Mikel", "Balenziaga", 34, 3, Demarkazioa.DEF));
+        selekzioa.add(new Futbolista(++azkenId, "Asier", "Illarramendi", 32, 4, Demarkazioa.MED));
+        selekzioa.add(new Futbolista(++azkenId, "Iñigo", "MArtínez", 31, 5, Demarkazioa.DEF));
+        selekzioa.add(new Futbolista(++azkenId, "Mikel", "San José", 33, 6, Demarkazioa.MED));
+        selekzioa.add(new Futbolista(++azkenId, "Gaizka", "Larrazabal", 25, 7, Demarkazioa.DEF));
+        selekzioa.add(new Futbolista(++azkenId, "Manu", "García", 36, 8, Demarkazioa.MED));
+        selekzioa.add(new Futbolista(++azkenId, "Aritz", "Aduriz", 41, 9, Demarkazioa.DEL));
+        selekzioa.add(new Futbolista(++azkenId, "Javier", "Eraso", 32, 10, Demarkazioa.MED));
+        selekzioa.add(new Futbolista(++azkenId, "Aitor", "Fernández", 31, 11, Demarkazioa.POR));
+        selekzioa.add(new Futbolista(++azkenId, "Aitor", "Fernández", 31, 12, Demarkazioa.POR));
+        selekzioa.add(new Futbolista(++azkenId, "Aitor", "Fernández", 31, 13, Demarkazioa.POR));
+        selekzioa.add(new Futbolista(++azkenId, "Aitor", "Fernández", 31, 14, Demarkazioa.POR));
+        selekzioa.add(new Futbolista(++azkenId, "Aitor", "Fernández", 31, 15, Demarkazioa.POR));
+        selekzioa.add(new Futbolista(++azkenId, "Aitor", "Fernández", 31, 16, Demarkazioa.POR));
+        selekzioa.add(new Futbolista(++azkenId, "Aitor", "Fernández", 31, 17, Demarkazioa.POR));
+
+
     
     }
     

@@ -17,6 +17,11 @@ public class Entrenador extends IntegranteSeleccion{
         this.idFederacion = idFederacion;
     }
 
+    @Override
+    public String toString() {
+        return "Entrenador [idFederacion=" + idFederacion + "]";
+    }
+
     public void dirigirEntrenamiento(){
         System.out.println(this.nombre + " entrenamentua zuzenduko du.");
     }

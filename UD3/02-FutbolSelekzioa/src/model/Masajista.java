@@ -15,6 +15,11 @@ public class Masajista extends IntegranteSeleccion {
         return titulación;
     }
 
+    @Override
+    public String toString() {
+        return "Masajista [titulación=" + titulación + ", añosExperiencia=" + añosExperiencia + "]";
+    }
+
     public void setTitulación(String titulación) {
         this.titulación = titulación;
     }

@@ -26,6 +26,12 @@ public class IntegranteSeleccion {
         return nombre;
     }
 
+    @Override
+    public String toString() {
+        return "IntegranteSeleccion [id=" + id + ", nombre=" + nombre + ", apellidos=" + apellidos + ", edad=" + edad
+                + "]";
+    }
+
     public void setNombre(String nombre) {
         this.nombre = nombre;
     }
