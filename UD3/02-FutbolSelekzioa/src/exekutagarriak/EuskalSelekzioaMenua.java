@@ -1,3 +1,9 @@
+/*GALDETZEKO:
+ * - sort() metodoaren konstruktorea, zeba null??
+ * - nola konpondu Selekzioa.selekzioOsoaSortu errepikatu behar ez izatea 
+ * (orokorrean egitea ideia ona izango litzake, hasieran, baina ezin da horri deitu metodo baten barruan ez bagaude).
+ */
+
 package exekutagarriak;
 
 import java.util.ArrayList;
@@ -8,6 +14,7 @@ import model.Entrenador;
 import model.Futbolista;
 import model.IntegranteSeleccion;
 import model.Masajista;
+import model.Selekzioa;
 
 public class EuskalSelekzioaMenua {
     public static void main(String[] args) {
@@ -42,8 +49,11 @@ public class EuskalSelekzioaMenua {
                     aldaketa();
                     break;
                 case 5:
+                    bilatu();
                     break;
                 case 6:
+                    futbolariakAlfabetikokiIkusi();
+                    break;
                 case 20:
                     break;
                 default:
@@ -56,16 +66,16 @@ public class EuskalSelekzioaMenua {
     }
 
     public static void datuakIkusi(){
-        EuskalSelekzioa.selekzioOsoaSortu();
+        Selekzioa.selekzioOsoaSortu();
         int countFut = 0, countEntr = 0, countMas = 0, countBest = 0;
         System.out.println();
-        for (int index = 0; index < EuskalSelekzioa.selekzioa.size(); index++) {
-            System.out.println(EuskalSelekzioa.selekzioa.get(index));
-            if(EuskalSelekzioa.selekzioa.get(index).getClass() == Futbolista.class){
+        for (int index = 0; index < Selekzioa.selekzioa.size(); index++) {
+            System.out.println(Selekzioa.selekzioa.get(index));
+            if(Selekzioa.selekzioa.get(index).getClass() == Futbolista.class){
                 countFut++;
-            } else if(EuskalSelekzioa.selekzioa.get(index).getClass() == Entrenador.class){
+            } else if(Selekzioa.selekzioa.get(index).getClass() == Entrenador.class){
                 countEntr++;
-            } else if(EuskalSelekzioa.selekzioa.get(index).getClass() == Masajista.class){
+            } else if(Selekzioa.selekzioa.get(index).getClass() == Masajista.class){
                 countMas++;
             } else{
                 countBest++;
@@ -76,22 +86,22 @@ public class EuskalSelekzioaMenua {
     }
 
     public static void datuakIkusiTaldekatuta(){
-        EuskalSelekzioa.selekzioOsoaSortu();
+        Selekzioa.selekzioOsoaSortu();
         int count = 0;
         ArrayList<IntegranteSeleccion> fut = new ArrayList<>();
         ArrayList<IntegranteSeleccion> entre = new ArrayList<>();
         ArrayList<IntegranteSeleccion> mas = new ArrayList<>();
         ArrayList<IntegranteSeleccion> best = new ArrayList<>();
 
-        for (int i = 0; i < EuskalSelekzioa.selekzioa.size(); i++) {
-            if(EuskalSelekzioa.selekzioa.get(i).getClass() == Futbolista.class){
-                fut.add(EuskalSelekzioa.selekzioa.get(i));
-            } else if(EuskalSelekzioa.selekzioa.get(i).getClass() == Entrenador.class){
-                entre.add(EuskalSelekzioa.selekzioa.get(i));
-            } else if(EuskalSelekzioa.selekzioa.get(i).getClass() == Masajista.class){
-                mas.add(EuskalSelekzioa.selekzioa.get(i));
+        for (int i = 0; i < Selekzioa.selekzioa.size(); i++) {
+            if(Selekzioa.selekzioa.get(i).getClass() == Futbolista.class){
+                fut.add(Selekzioa.selekzioa.get(i));
+            } else if(Selekzioa.selekzioa.get(i).getClass() == Entrenador.class){
+                entre.add(Selekzioa.selekzioa.get(i));
+            } else if(Selekzioa.selekzioa.get(i).getClass() == Masajista.class){
+                mas.add(Selekzioa.selekzioa.get(i));
             } else{
-                best.add(EuskalSelekzioa.selekzioa.get(i));
+                best.add(Selekzioa.selekzioa.get(i));
             }
         }
         //FUTBOLARIAK
@@ -132,44 +142,83 @@ public class EuskalSelekzioaMenua {
         System.out.println("");
     }
     
-    //EGITEKE
+    /*sort metodoa (organizar/catalogar), array bati aplikatu al zaion metodoa da, eta barruko 
+    baloreak ordenatzeko balio du.
+     */
     public static void futbolariakAlfabetikokiIkusi(){
+        ArrayList<String> izenAbizenak = new ArrayList<>();
+        Selekzioa.selekzioOsoaSortu();
 
+        //izen abizenak gordetzeko arraylista sortu
+        for (int i = 0; i < Selekzioa.selekzioa.size(); i++) {
+            if(Selekzioa.selekzioa.get(i).getClass() == Futbolista.class){
+                izenAbizenak.add(Selekzioa.selekzioa.get(i).getApellidos() + ", " + Selekzioa.selekzioa.get(i).getNombre());
+            }
+        }
+
+        //izen abizenen arraylista ordenatu
+        //GALDETU KONSTRUKTOREARI BURUZ, ZEBA NULL?
+        izenAbizenak.sort(null); 
+
+        System.out.println("\nSelekzioko futbolista guztiak alfabetikoki ordenatuta:");
+        
+        for (int i = 0; i < izenAbizenak.size(); i++) {
+            System.out.println(izenAbizenak.get(i));
+        }
+
+        System.out.println("");
     }
 
-    //EGITEKE
     public static void partaideakAlfabetikokiIkusi(){
-    
+        ArrayList<String> izenAbizenak = new ArrayList<>();
+        Selekzioa.selekzioOsoaSortu();
+
+        //izen abizenak gordetzeko arraylista sortu
+        for (int i = 0; i < Selekzioa.selekzioa.size(); i++) {
+            izenAbizenak.add(Selekzioa.selekzioa.get(i).getApellidos() + ", " + Selekzioa.selekzioa.get(i).getNombre());
+        }
+
+        //izen abizenen arraylista ordenatu
+        //GALDETU KONSTRUKTOREARI BURUZ, ZEBA NULL?
+        izenAbizenak.sort(null); 
+
+        System.out.println("\nSelekzioko partaide guztiak alfabetikoki ordenatuta:");
+        
+        for (int i = 0; i < izenAbizenak.size(); i++) {
+            System.out.println(izenAbizenak.get(i));
+        }
+
+        System.out.println("");
     }
 
     public static void aldaketa(){
         int id;
         String postua;
-        EuskalSelekzioa.selekzioOsoaSortu();
+        Selekzioa.selekzioOsoaSortu();
         Scanner in = new Scanner(System.in);
 
         System.out.println("Zein jokalariaren posizioa aldatu nahi duzu (ID-a esan)?");
         id = in.nextInt();
 
-        for (int i = 0; i < EuskalSelekzioa.selekzioa.size(); i++) {
-            if(EuskalSelekzioa.selekzioa.get(i).getId() == id){
-                System.out.println(((Futbolista)EuskalSelekzioa.selekzioa.get(i)).getDemarkazioa() + ", posizioan zengoen, zein posiziora aldatu nahi duzu (POR, DEF, MED, DEL)?");
+        for (int i = 0; i < Selekzioa.selekzioa.size(); i++) {
+            if(Selekzioa.selekzioa.get(i).getId() == id){
+                System.out.println(((Futbolista)Selekzioa.selekzioa.get(i)).getDemarkazioa() + " posizioan zegoen, zein posiziora aldatu nahi duzu (POR, DEF, MED, DEL)?");
                 postua = in.next();
                 switch(postua){
                     case "POR":
-                        ((Futbolista)EuskalSelekzioa.selekzioa.get(i)).setDemarkazioa(Demarkazioa.POR);
+                        ((Futbolista)Selekzioa.selekzioa.get(i)).setDemarkazioa(Demarkazioa.POR);
                         System.out.println("Ondo aldatu da.");
                         break;
                     case "DEF":
-                        ((Futbolista)EuskalSelekzioa.selekzioa.get(i)).setDemarkazioa(Demarkazioa.DEF);
+                        ((Futbolista)Selekzioa.selekzioa.get(i)).setDemarkazioa(Demarkazioa.DEF);
                         System.out.println("Ondo aldatu da.");
                         break;
                     case "MED":
-                        ((Futbolista)EuskalSelekzioa.selekzioa.get(i)).setDemarkazioa(Demarkazioa.MED);
+                        ((Futbolista)Selekzioa.selekzioa.get(i)).setDemarkazioa(Demarkazioa.MED);
                         System.out.println("Ondo aldatu da.");
                         break;
                     case "DEL":
-                        ((Futbolista)EuskalSelekzioa.selekzioa.get(i)).setDemarkazioa(Demarkazioa.DEL);
+                        ((Futbolista)Selekzioa.selekzioa.get(i)).setDemarkazioa(Demarkazioa.DEL);
                         System.out.println("Ondo aldatu da.");
                         break;
                     default:
@@ -177,6 +226,21 @@ public class EuskalSelekzioaMenua {
                 }
             }
         }
-        in.close();
+    }
+
+    public static void bilatu(){
+        String abizena;
+        Selekzioa.selekzioOsoaSortu();
+        Scanner in = new Scanner(System.in);
+
+        System.out.println("Zein jokalariaren datuak ikusi nahi dituzu (esan abizena)?");
+        abizena = in.next();
+
+        for (int i = 0; i < Selekzioa.selekzioa.size(); i++) {
+            if(Selekzioa.selekzioa.get(i).getApellidos().equalsIgnoreCase(abizena)){
+                System.out.println(Selekzioa.selekzioa.get(i));
+            }
+        }
+        System.out.println("");
     }
 }
