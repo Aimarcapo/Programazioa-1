@@ -6,6 +6,10 @@ public class Selekzioa {
     public static int azkenId = 0; //Erabili den azken identifikadorea
     public static ArrayList<IntegranteSeleccion> selekzioa = new ArrayList<>();
 
+    public Selekzioa(){
+        selekzioOsoaSortu();
+    } 
+
     public static void futbolariBat(){
         //Falta da id automatikoa ezartzea
         Futbolista Asier = new Futbolista(++azkenId, "Asier", "Villalibre", 23, 11, Demarkazioa.DEL);
