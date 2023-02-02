@@ -14,7 +14,7 @@ public class PartidakKudeatu {
     private static ArrayList<Partida> partidak = new ArrayList<>();
 
     public static void main(String[] args) {
-        
+        partidaBatenDatuakEskatu();
     }
 
     public static int hasierakoPartidakErregistratu(){
@@ -22,21 +22,27 @@ public class PartidakKudeatu {
     }
 
     public static Partida partidaBatenDatuakEskatu(){
-        LocalDate data;
         String aurkaria;
         ArrayList<Futbolista> txartelak = new ArrayList<>();
-        Partida partida = new Partida(null, null, null);
         Scanner in = new Scanner(System.in);
 
         System.out.print("Noiz jokatu zen (uuuu-hh-ee)? ");
-        data = in.next();
+        LocalDate data = LocalDate.parse(in.next());
+        System.out.println(data);
         System.out.print("Noren kontra? ");
         aurkaria = in.next();
         System.out.print("Selekzioko jokalariaren batek jaso al zuen txartelik? (Sartu dortsalak, komaz banatuta edo sakatu ENTER) ");
-    
+        for (int i = 0; i < euskalSelekzioa.getSelekzioa().size(); i++) {
+            if((Futbolista)(euskalSelekzioa.getSelekzioa().get(i))){
+
+            }
+        }
+
+        Partida partida = new Partida(data, aurkaria, txartelak);
+
         return partida;
     }
-
+/*
     public static void partidakBistaratu(){
         System.out.println("\nPARTIDEN ZERRENDA\n-----------------------------------");
         for (int i = 0; i < partidak.size(); i++) {
@@ -59,4 +65,5 @@ public class PartidakKudeatu {
             }
         }
     }
+*/
 }

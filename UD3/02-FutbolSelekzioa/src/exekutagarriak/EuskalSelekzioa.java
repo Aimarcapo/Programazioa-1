@@ -4,14 +4,14 @@ import model.Selekzioa;
 
 public class EuskalSelekzioa {
     public static void main(String[] args) {
-        
-        Selekzioa.futbolariBat();
+        Selekzioa euskalSelekzioa = new Selekzioa();
+        euskalSelekzioa.futbolariBat();
         System.out.println("\n\n");
-        Selekzioa.bestePartaideBatzukSortu();
+        euskalSelekzioa.bestePartaideBatzukSortu();
         System.out.println("\n\n");
-        Selekzioa.selekzioOsoaSortu();
+        euskalSelekzioa.selekzioOsoaSortu();
         int ezabatzekoIda = 4;
-        if (Selekzioa.partaideaEzabatu(ezabatzekoIda)){
+        if (euskalSelekzioa.partaideaEzabatu(ezabatzekoIda)){
             System.out.println(ezabatzekoIda + " id-a duen partaidea ezabatu da.");
         }
     }

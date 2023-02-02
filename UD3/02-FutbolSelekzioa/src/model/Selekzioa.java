@@ -3,14 +3,30 @@ package model;
 import java.util.ArrayList;
 
 public class Selekzioa {
-    public static int azkenId = 0; //Erabili den azken identifikadorea
-    public static ArrayList<IntegranteSeleccion> selekzioa = new ArrayList<>();
+    private  int azkenId = 0; //Erabili den azken identifikadorea
+    private  ArrayList<IntegranteSeleccion> selekzioa = new ArrayList<>();
 
     public Selekzioa(){
         selekzioOsoaSortu();
     } 
 
-    public static void futbolariBat(){
+    public  int getAzkenId() {
+        return azkenId;
+    }
+
+    public  void setAzkenId(int azkenId) {
+        this.azkenId = azkenId;
+    }
+
+    public  ArrayList<IntegranteSeleccion> getSelekzioa() {
+        return selekzioa;
+    }
+
+    public  void setSelekzioa(ArrayList<IntegranteSeleccion> selekzioa) {
+        this.selekzioa = selekzioa;
+    }
+
+    public void futbolariBat(){
         //Falta da id automatikoa ezartzea
         Futbolista Asier = new Futbolista(++azkenId, "Asier", "Villalibre", 23, 11, Demarkazioa.DEL);
         System.out.println("Asierren erregistroa sortu da:");
@@ -19,7 +35,7 @@ public class Selekzioa {
         Asier.entrenar();        
     }
     
-    public static void bestePartaideBatzukSortu(){
+    public  void bestePartaideBatzukSortu(){
         Entrenador Clemente = new Entrenador(++azkenId, "Javier", "Clemente", 45, "a00");
         Masajista Sertxiberrieta = new Masajista(++azkenId, "Iñaki", "Sertxiberrieta", 35, "Bai", 5);
         IntegranteSeleccion Etxeburu = new IntegranteSeleccion(++azkenId, "Ander", "Etxeburu", 25);
@@ -37,7 +53,7 @@ public class Selekzioa {
         Etxeburu.viajar();
     }
 
-    public static void selekzioOsoaSortu(){
+    public  void selekzioOsoaSortu(){
         
         selekzioa.add(new Futbolista(++azkenId, "Aitor", "Fernández", 31, 1, Demarkazioa.POR));
         selekzioa.add(new Futbolista(++azkenId, "Unai", "Bustinza", 30, 2, Demarkazioa.DEF));
@@ -66,7 +82,7 @@ public class Selekzioa {
         selekzioa.add(new IntegranteSeleccion(++azkenId,"Ander","Etxeburu",0));
     }
     
-    public static boolean partaideaEzabatu(int id){
+    public  boolean partaideaEzabatu(int id){
         for (int i = 0; i < selekzioa.size(); i++) {
             if(selekzioa.get(i).getId() == id){
                 selekzioa.remove(i);
