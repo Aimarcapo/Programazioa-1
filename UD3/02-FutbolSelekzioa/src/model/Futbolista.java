@@ -1,5 +1,8 @@
 package model;
 
+import exekutagarriak.EuskalSelekzioa;
+import model.Selekzioa;
+
 public class Futbolista extends IntegranteSeleccion{
 
     private int dorsal;
@@ -33,6 +36,19 @@ public class Futbolista extends IntegranteSeleccion{
 
     public void jugarPartido(){
         System.out.println(this.nombre + ", " + this.dorsal + " dorsalarekin, partida jolasten ari da.");
+    }
+
+    public Futbolista bilatuDortsaletik(int dortsala){
+        Selekzioa euskalSelekzioa = new Selekzioa();
+        for (IntegranteSeleccion i : euskalSelekzioa.getSelekzioa()){
+            if(i instanceof Futbolista){
+                if(((Futbolista) i).getDorsal() == dortsala){
+                    return (Futbolista) i;
+                }
+            }
+            
+        }
+        return null;
     }
 
     @Override
