@@ -59,7 +59,7 @@ public class Selekzioa {
         selekzioa.add(new Futbolista(++azkenId, "Unai", "Bustinza", 30, 2, Demarkazioa.DEF));
         selekzioa.add(new Futbolista(++azkenId, "Mikel", "Balenziaga", 34, 3, Demarkazioa.DEF));
         selekzioa.add(new Futbolista(++azkenId, "Asier", "Illarramendi", 32, 4, Demarkazioa.MED));
-        selekzioa.add(new Futbolista(++azkenId, "Iñigo", "MArtínez", 31, 5, Demarkazioa.DEF));
+        selekzioa.add(new Futbolista(++azkenId, "Iñigo", "Martínez", 31, 5, Demarkazioa.DEF));
         selekzioa.add(new Futbolista(++azkenId, "Mikel", "San José", 33, 6, Demarkazioa.MED));
         selekzioa.add(new Futbolista(++azkenId, "Gaizka", "Larrazabal", 25, 7, Demarkazioa.DEF));
         selekzioa.add(new Futbolista(++azkenId, "Manu", "García", 36, 8, Demarkazioa.MED));
