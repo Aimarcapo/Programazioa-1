@@ -11,16 +11,13 @@ public class Pertsona extends Bezeroa {
         this.emaila = emaila;
     }
 
+    @Override
     public String getIzena() {
-        return izena;
+        return izena + " " + abizena;
     }
 
     public void setIzena(String izena) {
         this.izena = izena;
-    }
-
-    public String getAbizena() {
-        return abizena;
     }
 
     public void setAbizena(String abizena) {

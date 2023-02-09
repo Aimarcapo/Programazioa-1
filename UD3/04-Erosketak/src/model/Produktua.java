@@ -7,8 +7,8 @@ public class Produktua {
     private String izena;
     private double prezioa;
     
-    public Produktua(char[] kodea, String izena, double prezioa) {
-        this.kodea = kodea;
+    public Produktua(String kodea, String izena, double prezioa) {
+        this.kodea = kodea.toCharArray();
         this.izena = izena;
         this.prezioa = prezioa;
     }
