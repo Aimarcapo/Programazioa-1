@@ -1,20 +1,26 @@
 package model;
 
-import java.util.Arrays;
-
 public class Produktua {
+    //ALDAGAI PRIBATUAK SORTU
     private char[] kodea;
     private String izena;
     private double prezioa;
     
+    //KONSTRUKTOREAK
     public Produktua(String kodea, String izena, double prezioa) {
         this.kodea = kodea.toCharArray();
         this.izena = izena;
         this.prezioa = prezioa;
     }
 
-    public char[] getKodea() {
-        return kodea;
+    //GETTERS AND SETTERS
+    public String getKodea() {
+        String kodeaStr = "";
+        for (int i = 0; i < kodea.length; i++) {
+            char momChar = this.kodea[i];
+            kodeaStr += momChar;
+        }
+        return kodeaStr;
     }
 
     public void setKodea(char[] kodea) {
@@ -39,7 +45,7 @@ public class Produktua {
 
     @Override
     public String toString() {
-        return "Produktua [kodea=" + Arrays.toString(kodea) + ", izena=" + izena + ", prezioa=" + prezioa + "]";
+        return "Produktua [kodea=" + this.getKodea() + ", izena=" + izena + ", prezioa=" + prezioa + "]";
     }
 
     
