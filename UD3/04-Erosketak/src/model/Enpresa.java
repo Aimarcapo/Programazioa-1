@@ -9,15 +9,9 @@ public class Enpresa extends Bezeroa{
     private String[] kontaktoenEmailak;
 
     //KONSTRUKTOREA
-    public Enpresa(int kodea, String izenJuridikoa, String izenKomertziala, String[] kontaktoenEmailak, String helbidea){
-        this.izenJuridikoa = izenJuridikoa;
-        this.izenKomertziala = izenKomertziala;
-        this.kontaktoenEmailak = kontaktoenEmailak;
-        setKodea(kodea);
-        setHelbidea(helbidea);
-    }
-
-    public Enpresa(String izenJuridikoa, String izenKomertziala, String[] kontaktoenEmailak) {
+    public Enpresa(int kodea, String helbidea, String izenJuridikoa, String izenKomertziala,
+            String[] kontaktoenEmailak) {
+        super(kodea, helbidea);
         this.izenJuridikoa = izenJuridikoa;
         this.izenKomertziala = izenKomertziala;
         this.kontaktoenEmailak = kontaktoenEmailak;
@@ -29,7 +23,7 @@ public class Enpresa extends Bezeroa{
         return "Enpresa [kodea=" + this.getKodea() + ", izenJuridikoa=" + izenJuridikoa + ", izenKomertziala=" + izenKomertziala
                 + ", kontaktoenEmailak=" + Arrays.toString(kontaktoenEmailak) + ", helbidea=" + this.getHelbidea() + "]";
     }
-
+    
     //GETTERS AND SETTERS
     public String getIzena() {
         return izenKomertziala;

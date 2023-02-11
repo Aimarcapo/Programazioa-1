@@ -16,9 +16,6 @@ public class EpekakoErosketa extends Erosketa {
         this.ordainketakBukatua = ordainketakBukatua;
         this.kuota = kuota;
     }
-
-    
-
     public EpekakoErosketa(String kodea, Bezeroa bezeroa, double guztira, int epeak, boolean ordainketakBukatua,
             double kuota) {
         super(kodea, bezeroa, guztira);
@@ -27,12 +24,12 @@ public class EpekakoErosketa extends Erosketa {
         this.kuota = kuota;
     }
 
-
-
+    //BESTELAKO METODOAK
     public double gainetikOrdainduBeharrekoa(){
         return (kuota * epeak);
     }
 
+    //GETTERS AND SETTERS
     public int getEpeak() {
         return epeak;
     }
@@ -51,7 +48,24 @@ public class EpekakoErosketa extends Erosketa {
     public void setKuota(double kuota) {
         this.kuota = kuota;
     }
+    
+    //TOSTRING 
+    @Override
+    public String toString() {
+        return "EpekakoErosketa [epeak=" + epeak + ", ordainketakBukatua=" + ordainketakBukatua + ", kuota=" + kuota
+                + "]";
+    }
 
-    
-    
+    @Override
+    public String toStringLuzea() {
+        String emaitza = "";
+        String ordaindua;
+        if(this.isOrdainketakBukatua()){
+            ordaindua = "Bai";
+        } else {
+            ordaindua = "Ez";
+        }
+        emaitza += String.format("%-15s %-15s %-15f %-15d %-15s %-15s\n", this.getData(), this.getBezeroa().getIzena(), this.getGuztira(), this.getEpeak(), this.getKuota(), ordaindua);
+        return emaitza;
+    }
 }

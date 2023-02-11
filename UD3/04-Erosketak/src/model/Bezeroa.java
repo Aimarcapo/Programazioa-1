@@ -5,6 +5,12 @@ abstract public class Bezeroa {
     private int kodea;
     private String helbidea;
 
+    //KONSTRUKTOREAK
+    public Bezeroa(int kodea, String helbidea) {
+        this.kodea = kodea;
+        this.helbidea = helbidea;
+    }
+
     //GETTER AND SETTERS
     public int getKodea(){
         return this.kodea;

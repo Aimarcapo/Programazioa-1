@@ -141,7 +141,7 @@ public class ProgramaNagusia_ArrayList {
 
     public static void liburuaGehitu(ArrayList<Liburua> liburuak) {
         /*
-         * Ez du lagatzen nextln()-a egitea, justo goia scanner-a sortzen ez bada.
+         * Ez du lagatzen nextln()-a egitea, justo goian scanner-a sortzen ez bada.
          * scanner-a ixten baduzu, gero, aukera
          * berri bat aukeratzean (menukoa), errorea ematen du
          */

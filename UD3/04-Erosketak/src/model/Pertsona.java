@@ -7,15 +7,8 @@ public class Pertsona extends Bezeroa {
     private String emaila;
 
     //KONSTRUKTOREAK
-    public Pertsona(int kodea, String izena, String abizena, String emaila, String helbidea) {
-        this.izena = izena;
-        this.abizena = abizena;
-        this.emaila = emaila;
-        setKodea(kodea);
-        setHelbidea(helbidea);
-    }
-
-    public Pertsona(String izena, String abizena, String emaila) {
+    public Pertsona(int kodea, String helbidea, String izena, String abizena, String emaila) {
+        super(kodea, helbidea);
         this.izena = izena;
         this.abizena = abizena;
         this.emaila = emaila;

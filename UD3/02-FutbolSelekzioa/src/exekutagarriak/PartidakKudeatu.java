@@ -189,7 +189,6 @@ public class PartidakKudeatu {
         System.out.println("");
 
         /*TXARTEL KOPURUA JOKALARIKO */
-        /*EGITEKE */
         System.out.println("Selekzioko jokalari bakoitzak duen txartel kopurua: ");
         //FOR-IF HAU JOKALARI BAKOITZETIK JOATEKO
         for (int i = 0; i < euskalSelekzioa.getSelekzioa().size(); i++) {
